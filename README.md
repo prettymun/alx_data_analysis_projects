@@ -65,3 +65,18 @@ B. How does the urban population share compare to the rural population?
 - Rural share in our data
 pop_r = 100 - pop_u
 pop_n(m) = ROUNDUP( C2/1000 ,0)
+
+**Visualized charts** ---- National population living in Rural vs Urban.png
+
+
+**INVESTIGATING ACCESS BY AREA**
+We want to investigate what access to water at the different service levels looks like for people in specific types of areas (national, urban, and rural).
+Investigating access by area
+
+01. Understanding the data
+What is the tendency and spread of the different water access features?
+A. How do these measures of water access compare across different types of areas?
+B. We’ll use the measures of central tendency and spread.
+
+wat_bas_n(rounded) = IF( ROUNDUP (G2,0) > 100, 100 , ROUNDUP ( G2,0))
+
