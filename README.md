@@ -66,7 +66,7 @@ B. How does the urban population share compare to the rural population?
 pop_r = 100 - pop_u
 pop_n(m) = ROUNDUP( C2/1000 ,0)
 
-**Visualized charts** ---- National population living in Rural vs Urban.png
+**Visualized charts** ( Line Chart) ---- National population living in Rural vs Urban.png
 
 
 **INVESTIGATING ACCESS BY AREA**
@@ -79,4 +79,9 @@ A. How do these measures of water access compare across different types of areas
 B. We’ll use the measures of central tendency and spread.
 
 wat_bas_n(rounded) = IF( ROUNDUP (G2,0) > 100, 100 , ROUNDUP ( G2,0))
+
+-Calculated the minimum, maximum, mean, mode, quartile 1, quartile 3, interquartile range, and standard deviation of water access values in different areas...: wat_bas_n, wat_lim_n, wat_unimp_n, wat_sur_n, wat_bas_r, wat_lim_r, wat_unimp_r, wat_sur_r, wat_bas_u, wat_lim_u, wat_unimp_u, wat_sur_u. 
+- Used the results to create **BOX AND WHISKER PLOT.**
+
+  **Visualized charts** ( Box and whisker plot chart ) ----- Access to water 2020.png
 
