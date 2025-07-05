@@ -85,3 +85,44 @@ wat_bas_n(rounded) = IF( ROUNDUP (G2,0) > 100, 100 , ROUNDUP ( G2,0))
 
   **Visualized charts** ( Box and whisker plot chart ) ----- Access to water 2020.png
 
+
+
+** INVESTIGATING ACCESS BY POPULATION SIZE**
+A. What does the national access to water look like based on national population size?
+B. What does urban access to water look like based on urban population size?
+C. What does rural access look like?
+
+**Visualize the national access to water on all four levels based on the national population size.**
+- In our previously created Global 2020 report sheet, create a bar chart. Since we want to Investigate how population size affects access levels, population size (pop_n) will be our independent variable (the cause), and our four access features (_wat_bas_n_, _wat_lim_n_, _wat_unimp_n_, and _wat_sur_n_) will be the dependent variables (the effects).
+- Because our access levels are percentages and we know that an individual or household can only be at one of those levels, we’ll change our bar chart to a 100% stacked column chart.
+
+**Visualized cahrts** - (A 100% stacked column chart) ---------- National distribution of water by service levels.png
+
+
+
+**Visualize the urban access to water on all four levels based on the urban population.**
+- In our previously created Global 2020 report sheet, let’s create another 100% stacked column chart, similar to what we created in A, but only for urban areas. Let’s use urban population share (pop_u in percentage) as our independent variable.
+- In order to avoid a messy bar chart, we are going to create a new feature called pop_u (rounded), which is the urban population share (pop_u) rounded to the nearest whole number. Use this new feature as the x-axis in the 100% stacked column chart, and set the aggregations to Average.
+- We notice that our x-axis isn’t arranged from zero to a hundred, as expected. Let’s order our dataset based on pop_u (rounded) before we consider any insights.
+
+  **Visualized chart** - ( A 100% stacked column chart) ---  Access of water by urban population.png
+
+
+**INVESTIGATING ACCESS BY INCOME GROUP**
+
+- We want to investigate the relationship between GNI (gross national income) or income group, population size, urbanization, and national water access.
+01. Understanding the data
+a. What is the effect of national population size and urbanization on GNI and water access?
+
+- Economies are classified into four income groups based on gross national income (GNI) per capita.
+- In our previously created Global 2020 report sheet, let’s create a pivot table. Because we want to group by income group, we will set our rows to the income group feature, income_group.
+- Our values are the sum of the population size (pop_n), the average urban share (pop_u), and the average national share of basic (_wat_bas_n_), limited (_wat_lim_n_), unimproved (_wat_unimp_n_), and surface (_wat_sur_n_) access.
+- Let’s also visualize our summary data. In order to better investigate the link between income group and the other features, it would be useful if we could sort our x-axis on income groups more appropriately.
+- Let’s convert our text column income_group in the dataset sheet to numbers, where NAN is 0, Low income is 1, Lower middle income is 2, Upper middle income is 3, and High income is 4.
+
+Formula :
+
+= IF(B2 = "NAN" , 0, IF( B2 = "Low income" , 1 , IF( B2 = "Lower middle income" , 2 , IF(B2 = "Upper middle income", 3 , IF(B2 = "High income", 4 )))))
+
+
+
