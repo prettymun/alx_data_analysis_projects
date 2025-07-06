@@ -1,6 +1,9 @@
 # alx_data_analysis_projects
 This repository includes my data analysis projects throughout my studies at Alx academy. DA is a subset of Data science. The dataset is called INTEGRATED PROJECT: ACCESS TO DRINKING WATER.
 
+
+**PART 1**
+
 **Understanding the Dataset: WHO/UNICEF JMP (2020)**
 This project uses data from the WHO/UNICEF Joint Monitoring Programme (JMP) for Water Supply, Sanitation, and Hygiene. The dataset provides estimates on access to water services for the year 2020.
 
@@ -125,4 +128,5 @@ Formula :
 = IF(B2 = "NAN" , 0, IF( B2 = "Low income" , 1 , IF( B2 = "Lower middle income" , 2 , IF(B2 = "Upper middle income", 3 , IF(B2 = "High income", 4 )))))
 
 
+**PART 2**
 
