@@ -182,14 +182,61 @@ Histograms: Year representation, ARC differences
 Region-based plots: ARC vs Population size
 
 **Features added**
-| Feature               | Purpose                                      |
-| --------------------- | -------------------------------------------- |
-| `y_diff`              | Year difference between observations         |
-| `ARC_n/r/u`           | Annual rate of change (national/rural/urban) |
+| Feature               | Purpose                                      |                                         
+| --------------------- | -------------------------------------------- |-----------------------------------------
+| `y_diff`              | Year difference between observations         | =IF(EQ(A2, A3), B3 - B2, "")
+| `ARC_n/r/u`           | Annual rate of change (national/rural/urban) |= IFERROR (IF (EQ(A2,A3), (E3-E2)/(B3-B2)," "),"null")
 | `ARC_diff`            | ARC difference between rural and urban       |
-| `wat_bas_x (rounded)` | Corrected percentages over 100               |
-| `ARC_x_full`          | Flags for full access in both observed years |
-| `region`              | Added region classification for analysis     |
+| `wat_bas_x (rounded)` | Corrected percentages over 100               |=IF(ISNUMBER(E68), ROUNDUP(E68, 0), "null")
+| `ARC_x_full`          | Flags for full access in both observed years |=IF(AND(EQ(A2, A3), F2 >= 99, F3 >= 99), "Full access", "")
+| `region`              | Added region classification for analysis     |=VLOOKUP(A2,Regions!$A$2:$B$233,2, FALSE)
+
+
+**y_diff**
+Pseudocode
+START
+If name(n+1) == name(n), then
+- y_diff = year(n+1) - year(n)
+Else
+- y_diff = “”
+End if
+END
+
+Flowchart
++--------+
+| START  |
++--------+
+     |
+     v
++----------------------------+
+| Is name(n+1) == name(n)?  |
++----------------------------+
+     |                      |
+     | Yes                  |
+     v                      v
++------------------+    +------------------------+
+| y_diff =           |   | y_diff = ""            |
+| year(n+1) - year(n)|  | (Leave cell blank)     |
++------------------+    +------------------------+
+     \                /
+      \              /
+       v            v
+     +----------------+
+     |      END       |
+     +----------------+
+
+
+**ARC_u/r/n**
+- The United Nations (UN) uses Annual Rates of Change (ARC) to see whether the proportion of access to drinking water is declining or increasing. The Annual Rates of Change (ARC) is a statistical measure used to express the average yearly change rate of a variable over a certain period.
+- It's calculated by taking the difference between the end and start values of the dataset and dividing the result by the number of years that separate the two values:
+
+- Where ARCx is the annual rate of change for the indicator x, Px,y1, and Px,y2 are the estimates for indicator x about year 1 (Y1) and year 2 (Y2) in percentage.
+- In Google Sheets, we need to do a row calculation between two years for the same country to calculate the ARC. Based on our column names, our ARC equation is*:
+
+**ARC_x = (wat_bas_x(n+1) - wat_bas_x(n))/(year(n+1) - year(n))**
+
+Where _x represents the different areas, ARC_n (national) we calculate using wat_bas_n, ARC_r (rural) using wat_bas_r and ARC_u (urban) using wat_bas_u. Remember, our wat_bas_x values are already in percentages.
+
 
 
 **Deliverables**
