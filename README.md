@@ -1,11 +1,32 @@
 # alx_data_analysis_projects
 This repository includes my data analysis projects throughout my studies at Alx academy. DA is a subset of Data science. The dataset is called INTEGRATED PROJECT: ACCESS TO DRINKING WATER.
 
+**Access to Drinking Water – Data Analysis Project**
+This repository contains my integrated data analysis project completed during my studies at ALX Academy. The project investigates global access to safe and affordable drinking water using data from the WHO/UNICEF Joint Monitoring Programme (JMP). This work supports Sustainable Development Goal 6: Clean Water and Sanitation.
+
+**Project Summary**
+The analysis is divided into two main parts:
+- Understanding the Data (Part 1) – In-depth exploration of the 2020 JMP dataset, analyzing access to drinking water by area, population size, and income group.
+- Transforming the Data (Part 2) – A longitudinal analysis of access from 2000 to 2020 using calculated metrics like Annual Rates of Change (ARC) to assess progress over time by region and population type.
+
 
 **PART 1**
 
 **Understanding the Dataset: WHO/UNICEF JMP (2020)**
 This project uses data from the WHO/UNICEF Joint Monitoring Programme (JMP) for Water Supply, Sanitation, and Hygiene. The dataset provides estimates on access to water services for the year 2020.
+
+**Part 1 – Understanding the Data (2020)**
+**Key Analyses:**
+Population Coverage: Compared dataset population to global estimates.
+Urban vs. Rural Access: Assessed disparities using charts.
+Service Levels: Analyzed national water service distribution using 100% stacked charts.
+Income Groups: Used pivot tables to relate income to access.
+
+**Tools Used:**
+Google Sheets (Formulas, Charts, Pivot Tables)
+Box & Whisker Plots
+Stacked Bar Charts
+
 
 **Dataset Features**
 name - Name of the country or region.
@@ -129,4 +150,79 @@ Formula :
 
 
 **PART 2**
+**Part 2 – Transforming the Data (2000–2020)**
+**Objectives:**
+Track water access trends over time.
+Calculate Annual Rates of Change (ARC) for basic water access.
+Compare performance by area (national/rural/urban) and region.
 
+**Key Transformations:**
+- Created y_diff column to capture time intervals between observations per country.
+- Calculated ARC values (ARC_n, ARC_r, ARC_u) using:
+
+ARC_x = (wat_bas_x(n+1) - wat_bas_x(n)) / (year(n+1) - year(n))
+
+- Managed missing and invalid values using IFERROR and logical conditions
+
+**Regional Analysis:**
+- Merged region metadata via LOOKUP.
+- Created summaries of ARC averages by region and area type.
+- Visualized relationships between ARC, region, and population size.
+
+**Key Insights:**
+- Sub-Saharan Africa shows slower progress, with full access projected around 2080 if trends persist.
+- Rural areas often saw higher ARC than urban, but many had lower starting access levels.
+- Some countries had negative or zero ARC despite no full access.
+
+** Visualizations**
+Line Charts: Urban vs Rural population
+Box Plots: Water access by area
+Stacked Column Charts: National & Urban Access Breakdown
+Histograms: Year representation, ARC differences
+Region-based plots: ARC vs Population size
+
+**Features added**
+| Feature               | Purpose                                      |
+| --------------------- | -------------------------------------------- |
+| `y_diff`              | Year difference between observations         |
+| `ARC_n/r/u`           | Annual rate of change (national/rural/urban) |
+| `ARC_diff`            | ARC difference between rural and urban       |
+| `wat_bas_x (rounded)` | Corrected percentages over 100               |
+| `ARC_x_full`          | Flags for full access in both observed years |
+| `region`              | Added region classification for analysis     |
+
+
+**Deliverables**
+- Summary Sheet: Metrics, distributions, counts by region, ARC, and access
+- MCQs: Evaluation of conceptual and analytical understanding
+- Dashboards: Interactive and static visual insights
+
+** Lessons Learned**
+- Real-world datasets often have inconsistencies (e.g., “null” vs blank).
+- Time-based comparisons require data preprocessing (sorting, deduplication).
+- Statistical averages like ARC must be contextualized (e.g., saturation effects).
+- Storytelling with data is key for actionable insights, especially in global issues.
+
+**Tools**
+Google Sheets (Formulas, LOOKUP, Pivot Tables, Charts)
+JMP Dataset
+Data Cleaning Techniques
+
+
+**References**
+WHO/UNICEF JMP 2020 Dataset
+UN SDG Goal 6: Clean Water and Sanitation
+ALX Data Analysis Curriculum
+
+
+
+
+
+
+
+**Author**
+Purity Musambi
+Data Analyst | Forensic Science Graduate | ALX Data Science Fellow
+Email: avulamusipurity@gmail.com
+Phone: +254 769 573 987
+Location: Kenya
