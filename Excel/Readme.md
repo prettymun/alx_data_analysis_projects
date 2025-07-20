@@ -21,7 +21,7 @@ This project uses data from the WHO/UNICEF Joint Monitoring Programme (JMP) for 
 
 **Part 1 – Understanding the Data (2020)**
 **Key Analyses:**
-Population Coverage: Compared dataset population to global estimates.
+Population Coverage: Compared the dataset population to global estimates.
 Urban vs. Rural Access: Assessed disparities using charts.
 Service Levels: Analyzed national water service distribution using 100% stacked charts.
 Income Groups: Used pivot tables to relate income to access.
@@ -30,7 +30,6 @@ Income Groups: Used pivot tables to relate income to access.
 Google Sheets (Formulas, Charts, Pivot Tables)
 Box & Whisker Plots
 Stacked Bar Charts
-
 
 **Dataset Features**
 name - Name of the country or region.
