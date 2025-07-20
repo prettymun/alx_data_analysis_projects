@@ -93,7 +93,7 @@ B. How does the urban population share compare to the rural population?
 pop_r = 100 - pop_u
 pop_n(m) = ROUNDUP( C2/1000 ,0)
 
-**Visualized charts** ( Line Chart) ---- National population living in Rural vs Urban.png
+**Visualized charts** ( Line Chart) ---- Excel/visuals.zip/National population living in Rural vs Urban.png
 
 
 **INVESTIGATING ACCESS BY AREA**
@@ -108,9 +108,9 @@ B. We’ll use the measures of central tendency and spread.
 wat_bas_n(rounded) = IF( ROUNDUP (G2,0) > 100, 100 , ROUNDUP ( G2,0))
 
 -Calculated the minimum, maximum, mean, mode, quartile 1, quartile 3, interquartile range, and standard deviation of water access values in different areas...: wat_bas_n, wat_lim_n, wat_unimp_n, wat_sur_n, wat_bas_r, wat_lim_r, wat_unimp_r, wat_sur_r, wat_bas_u, wat_lim_u, wat_unimp_u, wat_sur_u. 
-- Used the results to create **BOX AND WHISKER PLOT.**
+- Used the results to create a **BOX AND WHISKER PLOT**
 
-  **Visualized charts** ( Box and whisker plot chart ) ----- Access to water 2020.png
+  **Visualized charts** ( Box and whisker plot chart ) ----- Excel/visuals.zip/Access to water 2020.png
 
 
 
@@ -120,7 +120,7 @@ B. What does urban access to water look like based on urban population size?
 C. What does rural access look like?
 
 **Visualize the national access to water on all four levels based on the national population size.**
-- In our previously created Global 2020 report sheet, create a bar chart. Since we want to Investigate how population size affects access levels, population size (pop_n) will be our independent variable (the cause), and our four access features (_wat_bas_n_, _wat_lim_n_, _wat_unimp_n_, and _wat_sur_n_) will be the dependent variables (the effects).
+- In our previously created Global 2020 report sheet, create a bar chart. Since we want to investigate how population size affects access levels, population size (pop_n) will be our independent variable (the cause), and our four access features (_wat_bas_n_, _wat_lim_n_, _wat_unimp_n_, and _wat_sur_n_) will be the dependent variables (the effects).
 - Because our access levels are percentages and we know that an individual or household can only be at one of those levels, we’ll change our bar chart to a 100% stacked column chart.
 
 **Visualized cahrts** - (A 100% stacked column chart) ---------- National distribution of water by service levels.png
@@ -132,7 +132,7 @@ C. What does rural access look like?
 - In order to avoid a messy bar chart, we are going to create a new feature called pop_u (rounded), which is the urban population share (pop_u) rounded to the nearest whole number. Use this new feature as the x-axis in the 100% stacked column chart, and set the aggregations to Average.
 - We notice that our x-axis isn’t arranged from zero to a hundred, as expected. Let’s order our dataset based on pop_u (rounded) before we consider any insights.
 
-  **Visualized chart** - ( A 100% stacked column chart) ---  Access of water by urban population.png
+  **Visualized chart** - ( A 100% stacked column chart) ---  Excel/visual.zip/Access of water by urban population.png
 
 
 **INVESTIGATING ACCESS BY INCOME GROUP**
@@ -215,7 +215,7 @@ Flowchart
 | Is name(n+1) == name(n)?  |
 +----------------------------+
      |                      |
-     | Yes                  |
+     | Yes                  |no
      v                      v
 +------------------+    +------------------------+
 | y_diff =           |   | y_diff = ""            |
@@ -238,7 +238,7 @@ Flowchart
 
 **ARC_x = (wat_bas_x(n+1) - wat_bas_x(n))/(year(n+1) - year(n))**
 
-Where _x represents the different areas, ARC_n (national) we calculate using wat_bas_n, ARC_r (rural) using wat_bas_r and ARC_u (urban) using wat_bas_u. Remember, our wat_bas_x values are already in percentages.
+Where _x represents the different areas, ARC_n (national) we calculate using wat_bas_n, ARC_r (rural) using wat_bas_r, and ARC_u (urban) using wat_bas_u. Remember, our wat_bas_x values are already in percentages.
 
 
 
