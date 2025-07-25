@@ -1,6 +1,6 @@
 Project Summary: Maji Ndogo - Part 1
 - This project is based on a data exploration initiative for Maji Ndogo, a fictional community facing a water crisis. A large-scale survey was conducted, resulting in a rich database of over 60,000 records collected by engineers, field workers, scientists, and analysts. The goal of the project was to extract meaningful insights from the data to support data-driven decisions for improving water access and quality.
-- As part of the analysis, I used SQL Workbench and applied basic SQL commands including SELECT, WHERE, UPDATE, SET, LIKE, LIMIT, CREATE TABLE, and DROP TABLE to explore and manipulate the dataset.
+- As part of the analysis, I used SQL Workbench. I applied basic SQL commands, including SELECT, WHERE, UPDATE, SET, LIKE, LIMIT, CREATE TABLE, and DROP TABLE to explore and manipulate the dataset.
 
 Key tasks and objectives:
 - Get to Know the Data: Identified all foundational tables in the database and explored their structure using SHOW TABLES and SELECT * queries.
