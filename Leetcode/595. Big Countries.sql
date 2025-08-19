@@ -1,4 +1,4 @@
-Table: World
+/* Table: World
 
 +-------------+---------+
 | Column Name | Type    |
@@ -20,9 +20,10 @@ it has a population of at least twenty-five million (i.e., 25000000).
 Write a solution to find the name, population, and area of the big countries.
 
 Return the result table in any order.
+*/
 
-
-ANSWER
+#Solution
+ 
 SELECT
     name,
     population,
